@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Manrope, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  color: #878787;
+}
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+	background-color: #f4f4f4;
+}
+/* Header  */
+.heading-sec h2 {
+	margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 30px;
+  color: #38a72c;
+}
+.heading-sec h2:after {
+  content: " ";
+  width: 300px;
+  height: 5px;
+  background: #b7fe8a;
+  display: block;
+  margin-top: 20px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+a{
+  text-decoration: none;
+}
+
+/* Form  */
+.fa {
+	padding: 5px;
+}
+.form-wrap{
+	margin: 0 auto;
+}
+.form-control:focus{
+	border: black;
+  box-shadow: 1px 1px 1px 1px #38a72c;
+}
+.border-md {
+	border-width: 2px;
+}
+.form-group{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.form-control{
+	border-radius: 5px;
+}
+
+/* Gender */
+button, input, optgroup, select, textarea {
+	margin-right: 10px;
+	color: #39ed25;
+}
+.gender-text{
+	padding-right: 25px;
+}
+.mail-radio{
+	padding-right: 25px;
+}
+.form-check-input:checked {
+	background-color: #39ed25;
+	border-color: #39ed25;
+}
+
+/* Select-File  */
+.select-file p{
+ padding-right: 20px;
+}
+.select-file .input-file{
+	color: #38a72c;
+}
+
+/* Check-Box  */
+.checkbox-text{
+	padding-right: 10px;
+}
+
+
+/* Button */
+.btn-create-account{
+	background: #38a72c;
+  color: #fff;
+  font-weight: 600;
+	border: none;
+}
+.btn-create-account:hover{
+  color: #38a72c;
+  border: 2px solid #38a72c ;
+  border-radius: 7px;
+	background: transparent;
+}
+
+.btn-facebook {
+	background: #405d9d;
+	border: none;
+}
+.btn-facebook:hover,
+.btn-facebook:focus {
+	background: #314879;
+}
+
+.btn-twitter {
+	background: #42aeec;
+	border: none;
+}
+.btn-twitter:hover,
+.btn-twitter:focus {
+	background: #1799e4;
+}
+.social-button{
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+
+
+/* Already Registered?  */
+.already-registered{
+  color: #38a72c;
+}

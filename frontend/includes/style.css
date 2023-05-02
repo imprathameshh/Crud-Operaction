@@ -1,0 +1,127 @@
+.container {
+  max-width: 1304px;
+  margin: 0 auto;
+  width: 100%;
+}
+.login-block {
+  background-color: #f4f4f4;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  float: left;
+  width: 100%;
+  padding: 50px 0;
+}
+.banner-sec {
+  background: url(https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80)
+    no-repeat left bottom;
+  background-size: cover;
+  min-height: 500px;
+  border-radius: 0 10px 10px 0;
+  padding: 0;
+}
+.container {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1), 0 800px 0 #fff inset;
+}
+.carousel-inner {
+  border-radius: 0 10px 10px 0;
+}
+.carousel-caption {
+  text-align: left;
+  left: 5%;
+}
+.login-sec {
+  padding: 50px 30px;
+  position: relative;
+}
+.login-sec .copy-text {
+  position: absolute;
+  width: 80%;
+  bottom: 20px;
+  font-size: 13px;
+  text-align: center;
+}
+.login-sec .copy-text i {
+  color: #feb58a;
+}
+.login-sec .copy-text a {
+  color: #e36262;
+}
+a {
+  color: #38a72c;
+  text-decoration: none;
+}
+a:hover {
+  color: #38a72c;
+}
+
+/* Login-Section */
+/* Header  */
+.login-sec h2 {
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 30px;
+  color: #38a72c;
+}
+.login-sec h2:after {
+  content: " ";
+  width: 100px;
+  height: 5px;
+  background: #b7fe8a;
+  display: block;
+  margin-top: 20px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-login {
+  background: #38a72c;
+  color: #fff;
+  font-weight: 600;
+}
+.banner-text {
+  width: 70%;
+  position: absolute;
+  bottom: 40px;
+  padding-left: 20px;
+}
+.banner-text h2 {
+  color: #fff;
+  font-weight: 600;
+}
+.banner-text h2:after {
+  content: " ";
+  width: 100px;
+  height: 5px;
+  background: #fff;
+  display: block;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+.banner-text p {
+  color: #fff;
+}
+.pull-right {
+  float: right;
+}
+.width100 {
+  width: 100%;
+}
+.form-control {
+  border-radius: 3px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #bcc2ce;
+}
+svg {
+  background-size: 125% auto;
+}
+.form-control:focus{
+  border: black;
+  box-shadow: 1px 1px 1px 1px #38a72c;
+}
+.login-btn:hover{
+  color: #38a72c;
+  border: 2px solid #38a72c ;
+  border-radius: 7px;
+}
+
