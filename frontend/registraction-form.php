@@ -32,7 +32,7 @@ include("./includes/push.php");
               </span>
             </div>
             <input id="firstName" type="text" name="first_name" placeholder="First Name"
-              class="form-control bg-white border-left-0 " require>
+              class="form-control bg-white border-left-0 " required>
           </div>
 
           <!-- Last Name -->
@@ -43,7 +43,7 @@ include("./includes/push.php");
               </span>
             </div>
             <input id="lastName" type="text" name="last_name" placeholder="Last Name"
-              class="form-control bg-white border-left-0 border-md" require>
+              class="form-control bg-white border-left-0 border-md" required>
           </div>
 
           <!-- Email Address -->
@@ -54,7 +54,7 @@ include("./includes/push.php");
               </span>
             </div>
             <input id="email" type="email" name="email" placeholder="Email Address"
-              class="form-control bg-white border-left-0 border-md" require>
+              class="form-control bg-white border-left-0 border-md" required>
           </div>
 
           <!-- Phone Number -->
@@ -72,7 +72,7 @@ include("./includes/push.php");
               <option value="">+18</option>
             </select>
             <input id="phoneNumber" type="tel" name="phone" placeholder="Phone Number"
-              class="form-control bg-white border-md border-left-0 pl-3" require>
+              class="form-control bg-white border-md border-left-0 pl-3" required>
           </div><br>
 
           <!-- Job -->
@@ -81,7 +81,7 @@ include("./includes/push.php");
               <span class="input-group-text bg-white px-4 border-md border-right-0">
                 <i class="fa-solid fa-briefcase"></i> </span>
             </div>
-            <select id="job" name="jobtitle" class="form-control custom-select bg-white border-left-0 border-md" require>
+            <select id="job" name="jobtitle" class="form-control custom-select bg-white border-left-0 border-md" required>
               <option value="-1" selected disabled>Choose your Department</option>
               <option value="1">Designer</option>
               <option value="2">Developer</option>
@@ -98,7 +98,7 @@ include("./includes/push.php");
               </span>
             </div>
             <input id="password" type="password" name="password" placeholder="Password"
-              class="form-control bg-white border-left-0 border-md" require>
+              class="form-control bg-white border-left-0 border-md" required>
           </div>
 
           <!-- Password Confirmation -->
@@ -109,18 +109,18 @@ include("./includes/push.php");
               </span>
             </div>
             <input id="passwordConfirmation" type="password" name="passwordConfirmation" placeholder="Confirm Password"
-              class="form-control bg-white border-left-0 border-md" require>
+              class="form-control bg-white border-left-0 border-md" required>
           </div>
 
           <!-- Gender-Section  -->
           <div class="pb-1 d-flex pb-3 ">
             <label for="gender" class="control-label gender-text">Gender :</label>
             <div class="form-check mail-radio ">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1" checked require>
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1" checked required>
               <label class="form-check-label" for="flexRadioDefault1"> Male </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  value="0" require>
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  value="0" required>
               <label class="form-check-label" for="flexRadioDefault2"> Female </label>
             </div>
           </div>
@@ -129,20 +129,20 @@ include("./includes/push.php");
           <!-- Select File  -->
           <div class="d-flex pb-2 select-file">
             <p> Select image to upload : </p>
-            <input type="file" name="image" id="fileToUpload" class="input-file" require>
+            <input type="file" name="image" id="fileToUpload" class="input-file" required>
           </div>
 
           <!-- Check-Box  -->
           <div class="input-group mb-3">
             <div class="input-group-text">
-              <input class="form-check-input mt-0" type="checkbox" value="1" aria-label="Checkbox for following text input" require>
+              <input class="form-check-input mt-0" type="checkbox" value="1" aria-label="Checkbox for following text input" required>
               <label for="subscribeNews" class="checkbox-text">Agree to Terms and Conditions</label>
             </div>
           </div>
           
           <!-- Submit Button -->
           <div class=" form-group col-lg-12 mx-auto mb-0 ">
-            <input name="submit" type="submit" class="btn btn-primary btn-block py-2 btn-create-account "></input>
+            <input name="submit" type="submit" class="btn btn-primary btn-block py-2 btn-create-account but "></input>
           </div>
 
           <!-- Divider Text -->
@@ -176,4 +176,7 @@ include("./includes/push.php");
     </div>
     </div>
   </body>
+  <script>
+ 
+  </script>
 </html>

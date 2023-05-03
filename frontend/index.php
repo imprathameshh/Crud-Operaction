@@ -4,7 +4,7 @@
 include("../config.php");
 
 //Logging Page
-
+session_start();
 ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
@@ -20,13 +20,12 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     $sql = "SELECT * FROM employee_record WHERE username = '$username' or email = '$username'";
     $result = mysqli_query($conn, $sql);
     if($row = mysqli_fetch_assoc($result)){
-      session_start();
-     $_SESSION[ "id"] = $row["id"];
-     $_SESSION["login"] = $row["login"];
+     $_SESSION[ 'id'] = $row['id'];
+    //  $_SESSION["login"] = $row["login"];
      $_SESSION["jobtitle"] = $row["jobtitle"];
      if(password_verify($password, $row["password"])){
       header("location: ../admin/index.php");
-      echo "<script>alert('Invalid Username and Password'); window.location:'login.php'</script>";
+      echo "<script>alert('Invalid Username and Password'); window.location:'../admin/index.php'</script>";
      }
      else{
       echo "<script>alert('Invalid Username and Password'); window.location:'login.php'</script>";

@@ -46,7 +46,7 @@ $result = mysqli_query($conn, $sql);
                     <div class="col-12">
                         <div class="card">
                         <div class="card-body">
-                                <div class="col-sm-12 col-md-6">
+                                <!-- <div class="col-sm-12 col-md-6">
                                     <div class="dt-buttons btn-group flex-wrap">
                                         <button class="btn btn-secondary buttons-copy buttons-html5  " tabindex="0" aria-controls="datatable-buttons" type="button"><span>Copy</span></button>
                                         <button class="btn btn-secondary buttons-excel buttons-html5  " tabindex="0" aria-controls="datatable-buttons" type="button"><span>Excel</span></button>
@@ -55,7 +55,7 @@ $result = mysqli_query($conn, $sql);
                                             <button class="btn btn-secondary buttons-collection dropdown-toggle buttons-colvis" tabindex="0" aria-controls="datatable-buttons" type="button" aria-haspopup="true" aria-expanded="false"><span>Column visibility</span></button>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100" style="text-align: center;">
                             <tr class="table-head">
@@ -81,7 +81,7 @@ $result = mysqli_query($conn, $sql);
                                         <td><?php echo $row["phone"]; ?></td>
                                         <td><?php echo $row["jobtitle"]; ?></td>
                                         <td><?php echo $row["gender"]; ?></td>
-                                        <td><img src="../images<?php echo $row["image"]; ?>"style=" width: 50%; height: 50%;"></td>
+                                        <td><img src="../frontend/roomimages/?php echo $row['image']; ?>"value="<?php echo $row['image']; ?>"></td>
                                         <td> <a class="text-danger" href="delete.php?id=<?php echo $row["id"]; ?>" onclick="return checkDelete()">Delete</a> &nbsp;&nbsp;&nbsp; 
                                         <a class="text" href="edit.php?id=<?php echo $row["id"]; ?>">Edit
                                         </a>
