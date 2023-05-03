@@ -21,7 +21,7 @@ include("./includes/push.php");
     </div>
 
     <div class="col-md-7 col-lg-6 ml-auto form-wrap">
-      <form action="" method="post" enctype="multipart/form-data">
+      <form action=""  enctype="multipart/form-data"  name="myForm" method="post" > 
         <div class="row">
 
           <!-- First Name -->
@@ -33,6 +33,8 @@ include("./includes/push.php");
             </div>
             <input id="firstName" type="text" name="first_name" placeholder="First Name"
               class="form-control bg-white border-left-0 " required>
+              <br>
+              <div class="formerror"> <b></b> </div>
           </div>
 
           <!-- Last Name -->
@@ -176,7 +178,6 @@ include("./includes/push.php");
     </div>
     </div>
   </body>
-  <script>
- 
-  </script>
+  
 </html>
+

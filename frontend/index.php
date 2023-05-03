@@ -4,28 +4,29 @@
 include("../config.php");
 
 //Logging Page
-session_start();
 ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
+session_start();
 
 $username = $password ="";
 $username_err= $password_err = "";
-
 if(isset($_POST["submit"])){
-if(isset($_POST['username']) && isset($_POST['password'])){
+  if(isset($_POST['username']) && isset($_POST['password'])){
   $username = $_POST['username'];
   $password = $_POST['password'];
-  if($username != "" && $password != "" ){
-    $sql = "SELECT * FROM employee_record WHERE username = '$username' or email = '$username'";
-    $result = mysqli_query($conn, $sql);
-    if($row = mysqli_fetch_assoc($result)){
-     $_SESSION[ 'id'] = $row['id'];
+  $sql = "SELECT * FROM employee_record WHERE username = '$username' or email = '$username'";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_assoc($result);
+  if($row != NULL){
+    $_SESSION['id'] = $row['id'];
     //  $_SESSION["login"] = $row["login"];
-     $_SESSION["jobtitle"] = $row["jobtitle"];
+    $_SESSION["jobtitle"] = $row["jobtitle"];
+    (password_verify($password, $row["password"]));
      if(password_verify($password, $row["password"])){
       header("location: ../admin/index.php");
-      echo "<script>alert('Invalid Username and Password'); window.location:'../admin/index.php'</script>";
+      echo "success";
+      // echo "<script>alert('Invalid Username and Password'); window.location:'../admin/index.php'</script>";
      }
      else{
       echo "<script>alert('Invalid Username and Password'); window.location:'login.php'</script>";
@@ -33,9 +34,8 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     }
     else{
       echo "<script>alert('Invalid and Password'); window.location:'login.php'</script>";
-     }
+    }
   }
-}
 }
 
 

@@ -129,10 +129,10 @@ button, input, optgroup, select, textarea {
 	align-items: center;
 	justify-content: space-evenly;
 }
-
-
-
 /* Already Registered?  */
 .already-registered{
   color: #38a72c;
 }
+
+/* Validaction */
+

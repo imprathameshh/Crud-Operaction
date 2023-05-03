@@ -8,6 +8,7 @@ require("../config.php");
 if(isset($_POST["submit"]) && !empty($_POST["email"])){
 
   $fname = $_POST["first_name"];
+  // echo !empty($_POST['first_name'])? $fname = $_POST['first_name']: $error_fname = 'name not found';
   $lname = $_POST["last_name"];
   $email = $_POST["email"];
   
@@ -17,7 +18,7 @@ if(isset($_POST["submit"]) && !empty($_POST["email"])){
   $phone = $_POST["phone"];
   $jobtitle =$_POST["jobtitle"];
   $password = $_POST["password"];
-  $hash= md5($password);
+  $hash= password_hash($password, PASSWORD_DEFAULT);
   // $passwordConfirmation = $_POST["passwordconfirmation"];
   $gender=  $_POST["flexRadioDefault"];
   
@@ -30,7 +31,7 @@ if(isset($_POST["submit"]) && !empty($_POST["email"])){
     $extension = pathinfo($pgpic, PATHINFO_EXTENSION);
     $allowed_extensions = array(".jpg", "jpeg", ".png", ".gif", ".heic");
     $roompic = $pgpic . '.' . $extension;
-    move_uploaded_file($_FILES["image"]["tmp_name"], "roomimages/" . $roompic);
+    move_uploaded_file($_FILES["image"]["tmp_name"], "images/" . $roompic);
 
 // Check Username
   $checkuid = mysqli_query($conn, "SELECT * FROM employee_record where username = '$username' OR email = '$email'");
@@ -47,7 +48,8 @@ if(isset($_POST["submit"]) && !empty($_POST["email"])){
     // $sql_sine_in = "INSERT INTO `sign_up`(username, email, password) VALUES('$username', '$email', '$hash')"; 
     // $result_sine_in = mysqli_query($conn, $sql_sine_in);
 
-  echo "<script>alert('Sucessfully Account Created')</script>";
+  echo "<script>alert('Sucessfully Account Created'); window.location='index.php'</script>";
+  // header("location: '../index.php'");
 }
 else{
   echo "<script>alert('Email/Username already exists')</script>";

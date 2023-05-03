@@ -1,6 +1,7 @@
 <?php
 
 // Without logging you can't access the table directly so we need this
+
 // session_start();
 // if(!isset ($_SESSION['login'])){
 //   echo "<script>window.location='../frontend/index.php'</script>";
@@ -13,6 +14,11 @@ error_reporting(-1);
 
 //Show the database of values gender and job-role
 include_once("../config.php");
+
+session_start();
+$id = $_SESSION['id'];
+echo $id;
+
 $sql = "SELECT *, 
 CASE when gender = 1 THEN 'Male'else 'Female' END AS gender,
 
@@ -39,7 +45,6 @@ $result = mysqli_query($conn, $sql);
 <?php
         if (mysqli_num_rows($result) > 0) {
         ?>
-
             <div class="form">
                 <h2 style="text-align:center; margin:15px; padding:15px;" class="heading">Dashboard</h2>
                 <div class="row">
@@ -81,7 +86,7 @@ $result = mysqli_query($conn, $sql);
                                         <td><?php echo $row["phone"]; ?></td>
                                         <td><?php echo $row["jobtitle"]; ?></td>
                                         <td><?php echo $row["gender"]; ?></td>
-                                        <td><img src="../frontend/roomimages/?php echo $row['image']; ?>"value="<?php echo $row['image']; ?>"></td>
+                                        <td><img src="../frontend/images/<?php echo $row['image']; ?>" style="height:50px;width:50px"></td>
                                         <td> <a class="text-danger" href="delete.php?id=<?php echo $row["id"]; ?>" onclick="return checkDelete()">Delete</a> &nbsp;&nbsp;&nbsp; 
                                         <a class="text" href="edit.php?id=<?php echo $row["id"]; ?>">Edit
                                         </a>
