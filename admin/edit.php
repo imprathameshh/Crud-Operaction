@@ -93,11 +93,11 @@ $oldpwd = $row["password"];
                 <i class="fa-solid fa-briefcase"></i> </span>
             </div>
             <select id="job" name="jobtitle" class="form-control custom-select bg-white border-left-0 border-md" value="<?php echo $row["jobtitle"] ?>" require>
-              <option value="-1" selected disabled>Choose your Department</option>
-              <option value="1">Designer</option>
-              <option value="2">Developer</option>
-              <option value="3">Manager</option>
-              <option value="4">Accountant</option>
+              <option value="-1"  disabled>Choose your Department</option>
+              <option value="1" <?php echo $row['jobtitle'] == 1? "SELECTED ":"None"  ?>>Designer</option>
+              <option value="2"  <?php echo $row['jobtitle'] == 2? "SELECTED ":"None"  ?>>Developer</option>
+              <option value="3"  <?php echo $row['jobtitle'] == 3? "SELECTED ":"None"  ?>>Manager</option>
+              <option value="4"  <?php echo $row['jobtitle'] == 4? "SELECTED ":"None"  ?>>Accountant</option>
             </select>
           </div>
 
@@ -125,9 +125,10 @@ $oldpwd = $row["password"];
 
           <!-- Select File  -->
           <div class="d-flex pb-2 select-file">
-            <img src="../images/<?php echo $row["image"]; ?>" alt="">
+            <img src="../frontend/images/ "alt="">
             <p> Select image to upload : </p> 
             <input type="file" name="image" id="fileToUpload" class="input-file" >
+            <!-- <?php echo $row["image"];?>" style="width:50px"  -->
           </div>
 
           <!-- Submit Button -->

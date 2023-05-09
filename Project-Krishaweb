@@ -1,0 +1,7 @@
+<?php
+if(isset($_POST['submit'])){
+  !empty($_POST['fname'])? $fname = $_POST['fname']: $error_fname = 'name not found';
+  !empty($_POST['lname'])? $fname = $_POST['lname']: $error_lname = 'name not found';
+
+}
+?>

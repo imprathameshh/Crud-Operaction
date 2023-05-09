@@ -21,7 +21,7 @@ include("./includes/push.php");
     </div>
 
     <div class="col-md-7 col-lg-6 ml-auto form-wrap">
-      <form action=""  enctype="multipart/form-data"  name="myForm" method="post" > 
+      <form action=""  enctype="multipart/form-data"  name="myForm" method="post" onsubmit ="return validateForm()"> 
         <div class="row">
 
           <!-- First Name -->
@@ -32,9 +32,9 @@ include("./includes/push.php");
               </span>
             </div>
             <input id="firstName" type="text" name="first_name" placeholder="First Name"
-              class="form-control bg-white border-left-0 " required>
+              class="form-control bg-white border-left-0 " id="name">
               <br>
-              <div class="formerror"> <b></b> </div>
+              <span class="formerror"></span>
           </div>
 
           <!-- Last Name -->
@@ -45,7 +45,7 @@ include("./includes/push.php");
               </span>
             </div>
             <input id="lastName" type="text" name="last_name" placeholder="Last Name"
-              class="form-control bg-white border-left-0 border-md" required>
+              class="form-control bg-white border-left-0 border-md" >
           </div>
 
           <!-- Email Address -->
@@ -56,7 +56,7 @@ include("./includes/push.php");
               </span>
             </div>
             <input id="email" type="email" name="email" placeholder="Email Address"
-              class="form-control bg-white border-left-0 border-md" required>
+              class="form-control bg-white border-left-0 border-md" >
           </div>
 
           <!-- Phone Number -->
@@ -74,7 +74,7 @@ include("./includes/push.php");
               <option value="">+18</option>
             </select>
             <input id="phoneNumber" type="tel" name="phone" placeholder="Phone Number"
-              class="form-control bg-white border-md border-left-0 pl-3" required>
+              class="form-control bg-white border-md border-left-0 pl-3" >
           </div><br>
 
           <!-- Job -->
@@ -84,7 +84,7 @@ include("./includes/push.php");
                 <i class="fa-solid fa-briefcase"></i> </span>
             </div>
             <select id="job" name="jobtitle" class="form-control custom-select bg-white border-left-0 border-md" required>
-              <option value="-1" selected disabled>Choose your Department</option>
+              <option value="0" selected disabled>Choose your Department</option>
               <option value="1">Designer</option>
               <option value="2">Developer</option>
               <option value="3">Manager</option>
@@ -100,7 +100,7 @@ include("./includes/push.php");
               </span>
             </div>
             <input id="password" type="password" name="password" placeholder="Password"
-              class="form-control bg-white border-left-0 border-md" required>
+              class="form-control bg-white border-left-0 border-md" >
           </div>
 
           <!-- Password Confirmation -->
@@ -111,7 +111,7 @@ include("./includes/push.php");
               </span>
             </div>
             <input id="passwordConfirmation" type="password" name="passwordConfirmation" placeholder="Confirm Password"
-              class="form-control bg-white border-left-0 border-md" required>
+              class="form-control bg-white border-left-0 border-md" >
           </div>
 
           <!-- Gender-Section  -->
@@ -131,7 +131,7 @@ include("./includes/push.php");
           <!-- Select File  -->
           <div class="d-flex pb-2 select-file">
             <p> Select image to upload : </p>
-            <input type="file" name="image" id="fileToUpload" class="input-file" required>
+            <input type="file" name="image" id="fileToUpload" class="input-file" >
           </div>
 
           <!-- Check-Box  -->
@@ -178,6 +178,72 @@ include("./includes/push.php");
     </div>
     </div>
   </body>
+
+  <script>
+function clearErrors(){
+
+errors = document.getElementsByClassName('formerror');
+for(let item of errors)
+{
+    item.innerHTML = "";
+}
+
+
+}
+function seterror(id, error){
+//sets error inside tag of id 
+element = document.getElementById(id);
+element.getElementsByClassName('formerror')[0].innerHTML = error;
+
+}
+
+function validateForm(){
+var returnval = true;
+clearErrors();
+
+//perform validation and if validation fails, set the value of returnval to false
+var name = document.forms['myForm']["fname"].value;
+if (name.length<5){
+    seterror("name", "*Length of name is too short");
+    returnval = false;
+}
+
+if (name.length == 0){
+    seterror("name", "*Length of name cannot be zero!");
+    returnval = false;
+}
+
+// var email = document.forms['myForm']["femail"].value;
+// if (email.length>15){
+//     seterror("email", "*Email length is too long");
+//     returnval = false;
+// }
+
+// var phone = document.forms['myForm']["fphone"].value;
+// if (phone.length != 10){
+//     seterror("phone", "*Phone number should be of 10 digits!");
+//     returnval = false;
+// }
+
+// var password = document.forms['myForm']["fpass"].value;
+// if (password.length < 6){
+
+//     // Quiz: create a logic to allow only those passwords which contain atleast one letter, one number and one special character and one uppercase letter
+//     seterror("pass", "*Password should be atleast 6 characters long!");
+//     returnval = false;
+// }
+
+// var cpassword = document.forms['myForm']["fcpass"].value;
+// if (cpassword != password){
+//     seterror("cpass", "*Password and Confirm password should match!");
+//     returnval = false;
+// }
+
+return returnval;
+}
+
+
+  </script>
   
 </html>
 

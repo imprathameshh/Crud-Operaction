@@ -17,7 +17,7 @@ include_once("../config.php");
 
 session_start();
 $id = $_SESSION['id'];
-echo $id;
+
 
 $sql = "SELECT *, 
 CASE when gender = 1 THEN 'Male'else 'Female' END AS gender,
@@ -42,12 +42,19 @@ $result = mysqli_query($conn, $sql);
 </head>
 <!-- Showing the data -->
 <body>
+
 <?php
+
         if (mysqli_num_rows($result) > 0) {
         ?>
+
+         
             <div class="form">
+
                 <h2 style="text-align:center; margin:15px; padding:15px;" class="heading">Dashboard</h2>
+                            <a href="../frontend/index.php" class="back-to-class">Back To Login</a>
                 <div class="row">
+               
                     <div class="col-12">
                         <div class="card">
                         <div class="card-body">
@@ -61,6 +68,7 @@ $result = mysqli_query($conn, $sql);
                                         </div>
                                     </div>
                                 </div> -->
+                       
                             </div>
                             <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100" style="text-align: center;">
                             <tr class="table-head">
