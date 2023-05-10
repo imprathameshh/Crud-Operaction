@@ -109,7 +109,7 @@ $oldpwd = $row["password"];
               </span>
             </div>
             <input id="password" type="password" name="password" placeholder="Password"
-              class="form-control bg-white border-left-0 border-md" value="<?php echo $oldpwd ?>">
+              class="form-control bg-white border-left-0 border-md" >
           </div>
 
           <!-- Password Confirmation -->

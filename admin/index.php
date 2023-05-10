@@ -52,12 +52,13 @@ $result = mysqli_query($conn, $sql);
             <div class="form">
 
                 <h2 style="text-align:center; margin:15px; padding:15px;" class="heading">Dashboard</h2>
-                            <a href="../frontend/index.php" class="back-to-class">Back To Login</a>
                 <div class="row">
-               
                     <div class="col-12">
                         <div class="card">
+
                         <div class="card-body">
+                        <a href="../index.php"  class="heading" >Back To Login</a>
+
                                 <!-- <div class="col-sm-12 col-md-6">
                                     <div class="dt-buttons btn-group flex-wrap">
                                         <button class="btn btn-secondary buttons-copy buttons-html5  " tabindex="0" aria-controls="datatable-buttons" type="button"><span>Copy</span></button>

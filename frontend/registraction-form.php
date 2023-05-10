@@ -169,7 +169,7 @@ include("./includes/push.php");
 
           <!-- Already Registered -->
           <div class="text-center w-100 pt-3">
-            <p class="text-muted font-weight-bold">Already Registered? <a href="index.php"
+            <p class="text-muted font-weight-bold">Already Registered? <a href="../index.php"
                 class="already-registered ml-2">Login</a>
             </p>
           </div>
@@ -213,31 +213,7 @@ if (name.length == 0){
     returnval = false;
 }
 
-// var email = document.forms['myForm']["femail"].value;
-// if (email.length>15){
-//     seterror("email", "*Email length is too long");
-//     returnval = false;
-// }
 
-// var phone = document.forms['myForm']["fphone"].value;
-// if (phone.length != 10){
-//     seterror("phone", "*Phone number should be of 10 digits!");
-//     returnval = false;
-// }
-
-// var password = document.forms['myForm']["fpass"].value;
-// if (password.length < 6){
-
-//     // Quiz: create a logic to allow only those passwords which contain atleast one letter, one number and one special character and one uppercase letter
-//     seterror("pass", "*Password should be atleast 6 characters long!");
-//     returnval = false;
-// }
-
-// var cpassword = document.forms['myForm']["fcpass"].value;
-// if (cpassword != password){
-//     seterror("cpass", "*Password and Confirm password should match!");
-//     returnval = false;
-// }
 
 return returnval;
 }
